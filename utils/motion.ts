@@ -1,5 +1,3 @@
-import { Variants } from "framer-motion";
-
 export const navVariants = {
   hidden: {
     opacity: 0,
@@ -43,7 +41,10 @@ export const slideIn = (
   },
 });
 
-export const staggerContainer = (staggerChildren, delayChildren) => ({
+export const staggerContainer = (
+  staggerChildren: undefined,
+  delayChildren: undefined
+) => ({
   hidden: {},
   show: {
     transition: {
@@ -94,7 +95,12 @@ export const textVariant2 = {
   },
 };
 
-export const fadeIn = (direction: string, type, delay, duration) => ({
+export const fadeIn = (
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+) => ({
   hidden: {
     x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
     y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
@@ -129,7 +135,7 @@ export const planetVariants = (direction: string) => ({
   },
 });
 
-export const zoomIn = (delay, duration) => ({
+export const zoomIn = (delay: number, duration: number) => ({
   hidden: {
     scale: 0,
     opacity: 0,

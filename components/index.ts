@@ -1,4 +1,4 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
-export { Navbar, Footer };
+import { TypingText, TitleText } from "./CustomText";
+export { Navbar, Footer, TypingText, TitleText };
