@@ -7,19 +7,30 @@ import {
   WhatsNew,
   World,
   Feedback,
+  Insight,
 } from "../sections";
 
 export default function Page() {
   return (
-    <div className="bg-gray-800 overflow-hidden">
+    <div className="overflow-hidden bg-gray-800">
       <Navbar />
       <Hero />
-      <About />
-      <Explore />
-      <GetStarted />
-      <WhatsNew />
+      <div className="relative">
+        <About />
+        <div className="gradient-03 z-0" />
+        <Explore />
+      </div>
+      <div className="relative">
+        <GetStarted />
+        <div className="gradient-04 z-0" />
+        <WhatsNew />
+      </div>
       <World />
-      <Feedback />
+      <div className="relative">
+        <Insight />
+        <div className="gradient-04 z-0" />
+        <Feedback />
+      </div>
       <Footer />
     </div>
   );
