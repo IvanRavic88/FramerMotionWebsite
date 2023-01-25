@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import styles from "../src/styles";
-import { TitleText, TypingText } from "../components";
+import { ExploreCard, TitleText, TypingText } from "../components";
 import { motion } from "framer-motion";
 import { staggerContainer } from "../utils/motion";
 import { exploreWorlds } from "../constants";
 
-const Explore = () => {
+const Explore: React.FC = () => {
+  const [active, setActive] = useState<string>("world-2");
+
   return (
     <section className={`${styles.paddings}`} id="explore">
       <motion.div
@@ -27,6 +29,17 @@ const Explore = () => {
           }
           textStyles="text-center"
         />
+        <div className="mt-[50px] flex min-h-[70vh] flex-col gap-5 lg:flex-row">
+          {exploreWorlds.map((world, index) => (
+            <ExploreCard
+              key={world.id}
+              {...world}
+              index={index}
+              active={active}
+              handleClick={setActive}
+            />
+          ))}
+        </div>
       </motion.div>
     </section>
   );

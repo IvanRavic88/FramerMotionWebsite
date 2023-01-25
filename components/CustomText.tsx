@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { textContainer, textVariant2 } from "../utils/motion";
 
 interface customProps {
-  title: string | JSX.Element;
+  title?: string | JSX.Element;
   textStyles: string;
 }
 
