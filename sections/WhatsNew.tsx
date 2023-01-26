@@ -5,6 +5,7 @@ import styles from "../src/styles";
 import { staggerContainer, fadeIn, planetVariants } from "../utils/motion";
 import { NewFeatures, TitleText, TypingText } from "../components";
 import { newFeatures } from "../constants";
+import Image from "next/image";
 
 const WhatsNew: React.FC = () => {
   return (
@@ -35,9 +36,10 @@ const WhatsNew: React.FC = () => {
           variants={planetVariants("right")}
           className={`flex-1 ${styles.flexCenter}`}
         >
-          <img
+          <Image
             src="/whats-new.png"
-            alt="get-started"
+            alt="whats-new"
+            fill
             className="h-[90%] w-[90%] object-contain"
           />
         </motion.div>

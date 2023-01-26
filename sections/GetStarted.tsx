@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { staggerContainer, fadeIn, planetVariants } from "../utils/motion";
 import { StartSteps, TitleText, TypingText } from "../components";
 import { startingFeatures } from "../constants";
-import { MotionConfig } from "framer-motion";
+import Image from "next/image";
 
 const GetStarted: React.FC = () => {
   return (
@@ -20,9 +20,10 @@ const GetStarted: React.FC = () => {
           variants={planetVariants("left")}
           className={`flex-1 ${styles.flexCenter}`}
         >
-          <img
+          <Image
             src="/get-started.png"
             alt="get-started"
+            fill
             className="h-[90%] w-[90%] object-contain"
           />
         </motion.div>

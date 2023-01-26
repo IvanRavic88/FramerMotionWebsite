@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import styles from "../src/styles";
 import { fadeIn } from "../utils/motion";
+import Image from "next/image";
 
 interface exploreProps {
   id: string;
@@ -30,9 +31,10 @@ const ExploreCard: React.FC<exploreProps> = ({
       } ease-out-flex flex h-[700] min-w-[170px] cursor-pointer items-center justify-center transition-[flex] duration-[0.75s]`}
       onClick={() => handleClick(id)}
     >
-      <img
+      <Image
         src={imgUrl}
         alt={title}
+        fill
         className="absolute h-full w-full rounded-[24px] object-cover"
       />
       {active !== id ? (
